@@ -11,10 +11,19 @@ Console.WriteLine("Введите значение k2:");
 int k2 = int.Parse(Console.ReadLine());
 
 
+void CheckSameK1(int b1, int k1, int b2, int k2)
+{
+    if (k1 != k2)
+    {
+        int x = (b2 - b1)/(k1 - k2);
+        int y = k2 * x + b2;
+        Console.WriteLine($"x = {x}, y = {y}");
+    }
+    else
+    {
+        Console.WriteLine("Прямые параллельны. Решений нет!");
+    }
+}
 
-int x = (b2 - b1)/(k1 - k2);
-int y = k2 * x + b2;
 
-
-
-Console.WriteLine($"x = {x}, y = {y}");
+CheckSameK1(b1, k1, b2, k2);
