@@ -28,8 +28,14 @@ void PrintArrayWritten(int[] arr)
     Console.WriteLine($"Введена фигура - ({arr[0]}, {arr[1]}) ({arr[2]}, {arr[3]}) ({arr[4]}, {arr[5]}) ({arr[6]}, {arr[7]})");
 }
 
-
+void Maximizer(int[] arr)
+{
+    Console.WriteLine("Введите коэффицент масштабирования: ");
+    int k = int.Parse(Console.ReadLine());
+    Console.WriteLine($"Ваша фигура в масштабе {k} = ({arr[0] * k}, {arr[1] * k}) ({arr[2] * k}, {arr[3] * k}) ({arr[4] * k}, {arr[5] * k}) ({arr[6] * k}, {arr[7] * k})");
+}
 
 PrintArray(zeros);
 ZeroFill(zeros);
 PrintArrayWritten(zeros);
+Maximizer(zeros);
